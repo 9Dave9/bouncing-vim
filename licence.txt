@@ -4,8 +4,13 @@ third party vimrc files.
 
 All those parts are copyright of the respective owners.
 
+
+Forked originally from repo by from Luca Belmondo.
+Copyright Luca Belmondo, blmlcu NOSPAM @ gmail . com, https://github.com/lucabelmondo/bouncing-vim (removed or no longer public)
+
 The rest is
 
-Copyright Luca Belmondo, blmlcu NOSPAM @ gmail . com, https://github.com/lucabelmondo/bouncing-vim
+Copyright David Pereira, https://github.com/9Dave9/bouncing-vim
+
 
 Licence: MIT

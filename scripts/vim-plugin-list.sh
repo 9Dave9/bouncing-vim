@@ -3,7 +3,8 @@
 declare -a -r ESSENTIALS=(
   "ygt-mikekchar/agnostic"
         "mileszs/ack.vim"
-   "lucabelmondo/bouncing-vim"
+   "9Dave9/bouncing-vim"
+         "tomasr/molokai"
            "kien/ctrlp.vim"
        "fholgado/minibufexpl.vim"
      "scrooloose/nerdtree"
@@ -19,6 +20,7 @@ declare -a -r ESSENTIALS=(
           "tpope/vim-repeat"
           "tpope/vim-sensible"
           "tpope/vim-surround"
+          "hdima/python-syntax"
        "benmills/vimux"
 )
 
