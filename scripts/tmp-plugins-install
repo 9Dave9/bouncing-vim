@@ -12,9 +12,8 @@ This script allows you to install some plugins temporarily, for
 example during a pairing session.
 echo
 It will:
-- check if pathogen is installed
 - clone the plugins from github...
-- ...under ~/.vim/bundle with a name 'bouncing-vim-tmp-<plugin>'
+- ...under ~/.vim/pack/bundle/start with a name 'bouncing-vim-tmp-<plugin>'
 - skip the plugins the are already installed
 
 This is the list of plugins:
@@ -32,13 +31,6 @@ if [[ ! $REPLY =~ ^[Yy] ]]; then
   exit 1
 fi
 
-if ! has_pathogen; then
-  echo "
-pathogen.vim is required to use new temporary plugins
-but it is not installed. Exiting now."
-  exit 1
-fi
-
 for plugin in ${ESSENTIALS[@]}; do
-  install_tmp_plugin_with_pathogen "${plugin}"
+  install_tmp_plugin "${plugin}"
 done

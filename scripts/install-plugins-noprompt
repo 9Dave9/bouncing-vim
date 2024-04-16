@@ -16,10 +16,8 @@ source "${CURRDIR}/vim-plugin-list.sh"
 
 ensure_vim_dir_structure
 
-install_pathogen
-
-ln -sfv "${HOME_DIR}/.vim/bundle/bouncing-vim/rc-files/vimrc" "${HOME_DIR}/.vimrc"
-ln -sfv "${HOME_DIR}/.vim/bundle/bouncing-vim/rc-files/tmux.conf" "${HOME_DIR}/.tmux.conf"
+ln -sfv "${HOME_DIR}/.vim/pack/bundle/start/bouncing-vim/rc-files/vimrc" "${HOME_DIR}/.vimrc"
+ln -sfv "${HOME_DIR}/.vim/pack/bundle/start/bouncing-vim/rc-files/tmux.conf" "${HOME_DIR}/.tmux.conf"
 
 for github_project in ${ESSENTIALS[@]}; do
   clone_to_bundle_with_home "${github_project}" "${HOME_DIR}"

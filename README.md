@@ -12,17 +12,6 @@ principles:
 * allow people with different experiences to pair program proficiently and
   pleasantly
 
-It supports temporary installation of the Vim plugins by taking advantage
-of pathogen - useful for pairing sessions.
-
-If you are already using [pathogen.vim] (https://github.com/tpope/vim-pathogen),
-this distro can just be considered an extension of your existing setup.
-Chances are that you already have most of the third party plugins of this
-distro, as they are amongst the most popular.
-
-Credits are currently given in the form of links to the original source.
-Thanks to the great Vim community and to the many authors of the features.
-
 Content
 -------
 
@@ -30,7 +19,7 @@ Content
   - [Essentials](#essential-plugins)
   - [Nice-to-have's](#nice-to-have-plugins)
 * [Installing](#installing)
-  - [Install the Vim plugins (with pathogen)](#install-vim-plugins)
+  - [Install the Vim plugins](#install-vim-plugins)
   - [Install tmux 1.9 from source (only Ubuntu)](#install-tmux-source-ubuntu)
   - [Tmux configuration notes](#tmux-conf-notes)
   - [Updating existing Vim plugins](#update-existing-plugins)
@@ -153,9 +142,7 @@ Colorschemes:
 
 ## <a name="installing"></a>Installing
 
-Installation of tmux supports Ubuntu (tested on 12.04).
-
-The plugins use pathogen.
+Installation of tmux supports Ubuntu (tested on 20.04.6).
 
 It's useful to set Vim as default editor. If you wish to do so, put this
 in your `~/.bashrc` or `~/.bash_profile`:
@@ -166,7 +153,7 @@ in your `~/.bashrc` or `~/.bash_profile`:
 export EDITOR='/usr/bin/vim'
 ```
 
-### <a name="install-vim-plugins"></a>Install the Vim plugins (with pathogen)
+### <a name="install-vim-plugins"></a>Install the Vim plugins
 
 The list of essential and nice-to-have plugins is in `./vim-script/plugins`.
 

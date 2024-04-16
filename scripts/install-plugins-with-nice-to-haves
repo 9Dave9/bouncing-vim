@@ -10,5 +10,5 @@ source "${CURRDIR}/vim-plugin-list.sh"
 "${CURRDIR}/install-plugins"
 
 for plugin in ${NICE_TO_HAVES[@]}; do
-  install_plugin_with_pathogen "$plugin"
+  install_plugin "$plugin"
 done

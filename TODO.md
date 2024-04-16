@@ -12,7 +12,6 @@ To do
 * escape from buffergator
 * consider auto-correction
 * add open in split to git grep
-* merge `clone_to_bundle_with_home` into `install_plugin_with_pathogen`
 * add scripts for gnome-terminal profiles
 * reorganize plugins basic + by subject + get-all option
 * more statusline options: <http://got-ravings.blogspot.co.uk/2008/08/vim-pr0n-making-statuslines-that-own.html>
@@ -22,7 +21,6 @@ To do
 * add current word search to the grep helpers
 * Add Q&A section to the readme:
   - how is bouncing-vim different from, say, janus?
-  - why is it important to use pathogen instead of Vundle?
 * for plugins that end in ".vim" also check the presence of the folder without ".vim"
 * toggling lines C-n conflicts with multi-edit plugin
 * fix or remove leader not working in insert mode

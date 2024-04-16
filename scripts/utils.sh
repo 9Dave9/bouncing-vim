@@ -14,7 +14,7 @@ link_rcfile () {
 
   local rcfile_fullpath="${HOME}/.${rcfile}"
   local rcfile_bkp_path="${HOME}/${rcfile}.$(utc_timestamp).bkp"
-  local source_rcfile="${HOME}/.vim/bundle/bouncing-vim/rc-files/${rcfile}"
+  local source_rcfile="${HOME}/.vim/pack/bundle/start/bouncing-vim/rc-files/${rcfile}"
 
   if [[ $(readlink $rcfile_fullpath) == $source_rcfile ]]; then
     echo "$rcfile is already linking to the provided rcfile"
@@ -49,7 +49,7 @@ clone_to_bundle_with_home () {
   local home_dir=$2
 
   local github_basename=$(get_github_basename $github_project)
-  local plugin_dir="${home_dir}/.vim/bundle/$github_basename"
+  local plugin_dir="${home_dir}/.vim/pack/bundle/start/$github_basename"
 
   if [[ ! -d "${plugin_dir}" ]]; then
     echo "[install] $github_project -> ${plugin_dir}"
@@ -62,16 +62,17 @@ clone_to_bundle_with_home () {
 _get_std_plugin_dir () {
   local github_project=$1
   local github_basename=$(get_github_basename $github_project)
-  echo "${HOME}/.vim/bundle/${github_basename}"
+  #vim plugins should be sit in `.vim/pack/bundle/start/` dirrectory
+  echo "${HOME}/.vim/pack/bundle/start/${github_basename}"
 }
 
 _get_tmp_plugin_dir () {
   local github_project=$1
   local github_basename=$(get_github_basename $github_project)
-  echo "${HOME}/.vim/bundle/bouncing-vim-tmp-${github_basename}"
+  echo "${HOME}/.vim/pack/bundle/start/bouncing-vim-tmp-${github_basename}"
 }
 
-install_plugin_with_pathogen () {
+install_plugin () {
   local github_project=$1
   local std_plugin_dir=$(_get_std_plugin_dir "${github_project}")
   local tmp_plugin_dir=$(_get_tmp_plugin_dir "${github_project}")
@@ -87,7 +88,7 @@ install_plugin_with_pathogen () {
   fi
 }
 
-install_tmp_plugin_with_pathogen () {
+install_tmp_plugin () {
   local github_project=$1
 
   local std_plugin_dir=$(_get_std_plugin_dir "${github_project}")
@@ -101,24 +102,8 @@ install_tmp_plugin_with_pathogen () {
   fi
 }
 
-has_pathogen () {
-  if [[ -n $(find ~/.vim -name pathogen.vim) ]]; then
-    return 0
-  else
-    return 1
-  fi
-}
-
-install_pathogen () {
-  ensure_curl
-
-  echo "Install pathogen to handle your plugins"
-  curl -L -o ~/.vim/autoload/pathogen.vim \
-    https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
-}
-
 ls_tmp_plugins () {
-  find "${HOME}/.vim/bundle/" -type d -iname 'bouncing-vim-tmp-*'
+  find "${HOME}/.vim/pack/bundle/start/" -type d -iname 'bouncing-vim-tmp-*'
 }
 
 archive_tmp_plugins () {
@@ -143,6 +128,5 @@ ensure_curl () {
 
 ensure_vim_dir_structure () {
   echo "Ensure a complete ~/.vim dir structure"
-  mkdir -v -p ~/.vim/{bundle,autoload,colors,undo,swap,_disabled_plugins}
+  mkdir -v -p ~/.vim/{bundle,pack/bundle/start,autoload,colors,undo,swap,_disabled_plugins}
 }
-
