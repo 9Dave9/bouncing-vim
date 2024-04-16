@@ -43,30 +43,6 @@ fi
 
 ensure_vim_dir_structure
 
-# ================
-# === pathogen ===
-# ================
-
-# It will use pathogen if present, offer to install, or abort.
-
-if $is_a_clean_install; then
-  install_pathogen
-elif has_pathogen; then
-  echo "pathogen.vim is already installed"
-else
-  echo "pathogen.vim is required to install the vim plugins, but it is not installed"
-  select reply in "Install pathogen to handle your plugins" "Abort"; do
-    case "${reply}" in
-      "Install pathogen to handle your plugins" )
-        install_pathogen
-        break ;;
-      "Abort" )
-        echo "Note: pathogen.vim is required to install the vim plugins, aborting."
-        exit 1 ;;
-    esac
-  done
-fi
-
 # =============
 # === vimrc ===
 # =============
@@ -74,8 +50,7 @@ fi
 link_rcfile \
   "vimrc" \
   "
-NOTE: Make sure your vimrc initializes pathogen.
-You can also create a ~/.vimrc.after that will be loaded automatically."
+NOTE: You can also create a ~/.vimrc.after that will be loaded automatically."
 
 # =================
 # === tmux.conf ===
@@ -90,5 +65,5 @@ link_rcfile \
 # =======================
 
 for plugin in ${ESSENTIALS[@]}; do
-  install_plugin_with_pathogen "${plugin}"
+  install_plugin "${plugin}"
 done
