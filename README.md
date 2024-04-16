@@ -121,8 +121,6 @@ Colorschemes
 
 These are only installed when running the full install: `./vim-scripts/install-plugins`
 
-* [Coffeescript] (https://github.com/kchmck/vim-coffee-script) - Adds
-  CoffeeScript support to Vim. It covers syntax, indenting, compiling, and more.
 * [rails.vim] (https://github.com/tpope/vim-rails) - Ruby on Rails power tools.
 * [Ruby] (https://github.com/vim-ruby/vim-ruby) - Vim configuration files
   for editing and compiling Ruby within Vim.

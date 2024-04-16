@@ -28,7 +28,6 @@ declare -a -r NICE_TO_HAVES=(
          "tomasr/molokai"
           "hdima/python-syntax"
           "mikbe/rspec.vim"
-         "kchmck/vim-coffee-script"
           "fatih/vim-go"
        "mustache/vim-mustache-handlebars"
   "noahfrederick/vim-noctu"
