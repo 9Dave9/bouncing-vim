@@ -2,7 +2,8 @@
 
 set -e
 
-CURRDIR=$(cd "$(dirname $0)" && pwd -P)
+DIR="$( dirname -- "${BASH_SOURCE[0]}"; )"; # Get the directory name
+CURRDIR="$( realpath -e -- "$DIR"; )";    # Resolve its full path if need be
 
 HOME_DIR=$1
 
