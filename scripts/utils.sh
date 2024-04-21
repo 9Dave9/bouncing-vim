@@ -8,6 +8,14 @@ utc_timestamp () {
   date -u -d "today" +"%Y%m%dT%H%M%SZ"
 }
 
+preserve_existing_vim_rcfile () {
+  # Safe to re-run without vimrc.after being replaced by bouncing-vim .vimrc on > 1 iterations
+  if [ ! -f ${HOME_DIR}/.vimrc.after ]; then
+    # `cp -av` copies the syn-link as apposed to the actual location fo the file
+    sudo cp -av ${HOME_DIR}/.vimrc ${HOME_DIR}/.vimrc.after
+  fi
+}
+
 link_rcfile () {
   local rcfile=$1
   local additional_message=$2

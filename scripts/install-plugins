@@ -48,6 +48,8 @@ ensure_vim_dir_structure
 # === vimrc ===
 # =============
 
+preserve_existing_vim_rcfile
+
 link_rcfile \
   "vimrc" \
   "

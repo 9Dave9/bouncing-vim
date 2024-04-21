@@ -1,11 +1,9 @@
 To do
 
-* add message to the install script about the vimrc.after
 * IN PROGRESS: fix ALT modifier not working at all on Mac terminals
 * fix the `date` command not working on Mac
 * investigate fuzzy in-buffer search
 * remove as much as possible from the vimrc
-* change the installation so that it moves existing vimrc to vimrc.after
 * consider add moving text inside the line, and comma separate elements
 * add command for rotating vertical <-> horizontal splits
 * convert string to symbol and viceversa

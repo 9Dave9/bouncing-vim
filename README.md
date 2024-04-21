@@ -165,6 +165,9 @@ will be backed up.
 If you chose to link to the `vimrc`, you can still add custom configuration
 in a `~/.vimrc.after` file that will be loaded automatically.
 
+If you already have a .vimrc file this will be backed-up and then renamed to `~/.vimrc.after`
+preserving your custom vim configuration
+
 *Temporary install*:
 
 - run `./vim-scripts/tmp-plugins-install` at the beginning of the pairing session
