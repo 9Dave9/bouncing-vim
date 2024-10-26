@@ -2,7 +2,8 @@
 
 set -e
 
-CURRDIR=$(cd "$(dirname $0)" && pwd -P)
+DIR="$( dirname -- "${BASH_SOURCE[0]}"; )"; # Get the directory name
+CURRDIR="$( realpath -e -- "$DIR"; )";    # Resolve its full path if need be
 
 HOME_DIR=$1
 
@@ -15,6 +16,8 @@ source "${CURRDIR}/utils.sh"
 source "${CURRDIR}/vim-plugin-list.sh"
 
 ensure_vim_dir_structure
+
+preserve_existing_vim_rcfile
 
 ln -sfv "${HOME_DIR}/.vim/pack/bundle/start/bouncing-vim/rc-files/vimrc" "${HOME_DIR}/.vimrc"
 ln -sfv "${HOME_DIR}/.vim/pack/bundle/start/bouncing-vim/rc-files/tmux.conf" "${HOME_DIR}/.tmux.conf"
