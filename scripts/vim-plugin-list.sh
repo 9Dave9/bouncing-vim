@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 declare -a -r ESSENTIALS=(
+  "ludovicchabant/vim-gutentags"
   "ygt-mikekchar/agnostic"
         "mileszs/ack.vim"
    "9Dave9/bouncing-vim"
@@ -25,6 +26,7 @@ declare -a -r ESSENTIALS=(
 )
 
 declare -a -r NICE_TO_HAVES=(
+   "Exafunction/codeium.vim"
    "chriskempson/base16-vim"
        "ekalinin/Dockerfile.vim"
          "tomasr/molokai"
