@@ -23,6 +23,10 @@ declare -a -r ESSENTIALS=(
           "tpope/vim-surround"
           "hdima/python-syntax"
        "benmills/vimux"
+     "pangloss/vim-javascript"
+     "leafgarland/typescript-vim"
+     "maxmellon/vim-jsx-pretty"
+     "jparise/vim-graphql"
 )
 
 declare -a -r NICE_TO_HAVES=(
